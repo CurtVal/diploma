@@ -5,9 +5,169 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+a:hover{
+  background-color: rgb(123, 123, 123);
+  border: 1px;
+  border-radius: 5px;
+}
+.currentLink {
+  background-color: rgb(126, 126, 126);
+}
+a, a:hover, a:visited, a:active {
+  padding: 5px;
+  color: inherit;
+  text-decoration: none;
+  height: 45px;
+  width: 100%;
+  text-align: center;
+  line-height: 45px; 
+}
+
+.layout {
+  font-family: "Century Gothic";
+  background-color: rgb(228, 227, 227);
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.navbar {
+  padding: 5px;
+  background-color: rgb(171, 171, 171);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 10vh;
+  white-space: pre;
+  font-size: 14pt;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: rgb(228, 227, 227);
+}
+
+.home {
+  width: 8%;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  /* height: 50px; */
+  white-space: pre;
+}
+
+.container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleSt {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 16pt;
+}
+
+/* images */
+.image {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  flex-direction: row;
+  margin: 5px;
+  width: 95%;
+}
+
+canvas {
+  /* padding: 0;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 120px */
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  background-color: rgb(250, 250, 250);
+}
+
+thead {
+  /* text-decoration: solid; */
+  background-color: rgb(241, 241, 241);
+  font-weight: bold;
+  height: 30px;
+}
+
+td {
+  height: 30px;
+}
+
+.machineTable td, thead, tr {
+  /* display: block; */
+  border: 1px gray solid;
+  /* border-collapse: collapse; */
+  text-align: center; 
+}
+
+.sensorsTable td, thead, tr {
+  border: 1px gray solid;
+  text-align: center; 
+}
+
+.sensors td, thead, tr {
+  border: 1px gray solid;
+  text-align: center; 
+}
+
+/* .machineTable .tr {
+  display: block;
+  width: 100%;
+} */
+
+.tableDiv {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.charts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.hover {
+  background-color: rgb(160, 160, 160);
+}
+
+
