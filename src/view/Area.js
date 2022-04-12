@@ -45,13 +45,15 @@ export default function Area(props) {
         })*/
     }
 
-    /*const inFocus = (e) => {
+    const inFocus = (e) => {
         let current = e.target
+        current.classList.add("hover")
     }
 
-    const outFocus = () => {
-
-    }*/
+    const outFocus = (e) => {
+        let current = e.target
+        current.classList.remove("hover")
+    }
 
 
     return (
@@ -60,8 +62,7 @@ export default function Area(props) {
             <div className="image">
                 {/* <canvas id="canvas" width="700px" height="450px"></canvas> */}
                 <div><img src="area.jpg" width="600px" useMap="#image-map"></img></div>
-                <div className="tableDiv">
-                    <div>
+                <div className="doubleTableDiv">
                         <table id="machineTable" className="machineTable">
                             <thead>
                                 <tr>
@@ -71,23 +72,21 @@ export default function Area(props) {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td id="m1" onClick={onClickHandler}>Станок 1</td>
+                                    <td id="m1" onClick={onClickHandler} onMouseEnter={inFocus} onMouseLeave={outFocus}>Станок 1</td>
                                     <td>В работе</td>
                                 </tr>
                                 <tr>
-                                    <td id="m2" onClick={onClickHandler}>Станок 2</td>
+                                    <td id="m2" onClick={onClickHandler} onMouseEnter={inFocus} onMouseLeave={outFocus}>Станок 2</td>
                                     <td>В ожидании</td>
                                 </tr>
                                 <tr>
-                                    <td id="m3" onClick={onClickHandler}>Станок 3</td>
+                                    <td id="m3" onClick={onClickHandler} onMouseEnter={inFocus} onMouseLeave={outFocus}>Станок 3</td>
                                     <td>Отключен</td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
                     <br/>
                     {machine &&
-                        <div>
                             <table id="sensorsTable" className="sensorsTable">
                                 <thead>
                                     <tr><td colSpan="2">{`Станок ${machine}`}</td></tr>
@@ -103,7 +102,6 @@ export default function Area(props) {
                                     </tr>
                                 </tbody>
                             </table>
-                        </div>
                     }
                 </div>
             </div>

@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* min-width: 100%;
+  min-height: 100%; */
   
 }
 
@@ -39,21 +41,30 @@ a, a:hover, a:visited, a:active {
 }
 
 .navbar {
+  margin: 1px;
+  margin-bottom: 0;
   padding: 5px;
   background-color: rgb(171, 171, 171);
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 10vh;
+  max-height: 9.2vh;
   white-space: pre;
   font-size: 14pt;
+  border: 1px solid #474647;
+  border-radius: 2px
 }
 
 .content {
+  margin: 1px;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 88vh;
   background-color: rgb(228, 227, 227);
+  border: 1px solid #474647;
+  border-top: none;
+  border-radius: 2px
 }
 
 .home {
@@ -97,18 +108,9 @@ a, a:hover, a:visited, a:active {
 .image {
   display: flex;
   justify-content: space-around;
-  /* align-items: center; */
   flex-direction: row;
   margin: 5px;
   width: 95%;
-}
-
-canvas {
-  /* padding: 0;
-  margin: auto;
-  display: block;
-  position: absolute;
-  top: 120px */
 }
 
 table {
@@ -119,7 +121,6 @@ table {
 }
 
 thead {
-  /* text-decoration: solid; */
   background-color: rgb(241, 241, 241);
   font-weight: bold;
   height: 30px;
@@ -130,9 +131,7 @@ td {
 }
 
 .machineTable td, thead, tr {
-  /* display: block; */
   border: 1px gray solid;
-  /* border-collapse: collapse; */
   text-align: center; 
 }
 
@@ -146,18 +145,31 @@ td {
   text-align: center; 
 }
 
-/* .machineTable .tr {
-  display: block;
-  width: 100%;
-} */
-
-.tableDiv {
+.machineTable {
   margin-left: 10px;
   margin-right: 10px;
   width: 100%;
+}
+
+.machineStatusTable {
+  display: flex;
+  justify-self: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: 90%;
+}
+
+.tableDiv {
+  width: 90%;
+}
+
+.doubleTableDiv {
+  margin-left: 30px;
+  margin-right: 0px;
   display: flex;
   flex-direction: column;
   align-content: space-around;
+  align-items: center;
 }
 
 .charts {
@@ -166,8 +178,13 @@ td {
   justify-content: space-around;
 }
 
-.hover {
-  background-color: rgb(160, 160, 160);
+.sensors {
+  width: 90%;
 }
+
+.hover {
+  background-color: #e4e3e3;
+}
+
 
 

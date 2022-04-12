@@ -39,10 +39,8 @@ export default function Machines(props) {
     return (
         <div className="container">
             <div className="titleSt">Станки</div>
-            <div>
                 <div className="tableDiv">
-                    <div>
-                        <table id="machineTable" className="machineTable">
+                        <table id="machineStatusTable" className="machineTable">
                             <thead>
                                 <tr>
                                     <td>Cтанок</td>
@@ -72,9 +70,7 @@ export default function Machines(props) {
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
                 </div>
-            </div>
         </div>
     )
 
