@@ -107,15 +107,25 @@ export default function Data(props) {
         // сделать запрос, чтобы получить информацию о конкретном, значения записать в value
     }
 
+    const inFocus = (e) => {
+        let current = e.target
+        current.classList.add("hover")
+    }
+
+    const outFocus = (e) => {
+        let current = e.target
+        current.classList.remove("hover")
+    }
+
     return (
         <div className="container">
             <div className="titleSt">Показания датчиков</div>
             <table className="sensors">
                 <tbody>
                     <tr>
-                    <td id="m1" onClick={onClickHandler}>Станок 1</td>
-                    <td id="m2" onClick={onClickHandler}>Станок 2</td>
-                    <td id="m3" onClick={onClickHandler}>Станок 3</td>
+                    <td id="m1" onClick={onClickHandler} onMouseEnter={inFocus} onMouseLeave={outFocus}>Станок 1</td>
+                    <td id="m2" onClick={onClickHandler} onMouseEnter={inFocus} onMouseLeave={outFocus}>Станок 2</td>
+                    <td id="m3" onClick={onClickHandler} onMouseEnter={inFocus} onMouseLeave={outFocus}>Станок 3</td>
                     </tr>
                 </tbody>
             </table>

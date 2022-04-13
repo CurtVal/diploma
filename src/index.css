@@ -184,6 +184,7 @@ td {
 
 .hover {
   background-color: #e4e3e3;
+  cursor: pointer;
 }
 
 
